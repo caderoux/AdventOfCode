@@ -7,7 +7,7 @@ $GameMax = @{
 $Sum = 0
 $SumPower = 0
 
-Get-Content "sample1.txt" | ForEach-Object {
+Get-Content "data.txt" | ForEach-Object {
     ($_ -replace " ", "") -match "^Game(?<Game>\d*):(?<Draws>.*)$" | Out-Null
     $GameID = $Matches.Game
     "Game: $GameID"
